@@ -1,0 +1,486 @@
+/* Estilos da Caixa Única Integrada do Conserva_Fotos v5.1 */
+#fiscalizacampo-panel {
+  position: fixed;
+  top: 76px;
+  right: 20px;
+  width: 330px;
+  max-height: 90vh;
+  z-index: 999999;
+  background: #18181b;
+  color: #f4f4f5;
+  border: 1px solid #3f3f46;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(245, 158, 11, 0.25);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-radius 0.2s ease;
+  user-select: none;
+}
+
+/* Estado Recolhido: Caixa Única em formato de Pílula Dourada Clicável */
+#fiscalizacampo-panel.collapsed {
+  width: auto !important;
+  max-width: fit-content;
+  border-radius: 999px !important;
+  background: #f59e0b !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(245, 158, 11, 0.5) !important;
+}
+
+#fiscalizacampo-panel.collapsed .fac-body {
+  display: none !important;
+}
+
+#fiscalizacampo-panel.collapsed .fac-header {
+  background: #f59e0b !important;
+  border-bottom: none !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  cursor: pointer;
+}
+
+#fiscalizacampo-panel.collapsed .fac-header strong {
+  color: #09090b !important;
+}
+
+#fiscalizacampo-panel.collapsed .fac-header svg {
+  color: #09090b !important;
+}
+
+#fiscalizacampo-panel.collapsed .fac-badge-ver {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #09090b !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+#fiscalizacampo-panel.collapsed .fac-close-btn {
+  color: #09090b !important;
+}
+
+#fiscalizacampo-panel.collapsed:hover {
+  background: #fbbf24 !important;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(251, 191, 36, 0.7) !important;
+}
+
+#fiscalizacampo-panel.hidden,
+.fac-btn-stop.hidden,
+.fac-live-box.hidden,
+#fac-global-stop-bar.hidden,
+#fac-manual-steps-section {
+  display: none !important;
+}
+
+.fac-header {
+  padding: 10px 14px;
+  background: #27272a;
+  border-bottom: 1px solid #3f3f46;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.fac-header:active {
+  cursor: grabbing;
+}
+
+.fac-header h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fac-badge-ver {
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.fac-close-btn {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.fac-close-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fac-body {
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 11.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fac-group-badge {
+  background: #09090b;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #27272a;
+}
+
+.fac-group-badge span {
+  color: #a1a1aa;
+  font-size: 10px;
+}
+
+.fac-group-badge input {
+  background: transparent;
+  border: 1px solid #3f3f46;
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+
+.fac-field-label {
+  font-weight: 600;
+  color: #d4d4d8;
+  font-size: 11px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.fac-field-hint {
+  font-size: 9.5px;
+  color: #71717a;
+  font-weight: normal;
+}
+
+.fac-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.fac-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.fac-input, .fac-select {
+  width: 100%;
+  box-sizing: border-box;
+  background: #09090b;
+  border: 1px solid #3f3f46;
+  color: #f4f4f5;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.fac-input:focus, .fac-select:focus {
+  border-color: #f59e0b;
+}
+
+/* Formato de Nomenclatura Box */
+.fac-naming-box {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fac-naming-preview {
+  font-family: monospace;
+  font-size: 11px;
+  color: #34d399;
+  background: #18181b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px dashed #059669;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Seção de Data Limite */
+.fac-date-section {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fac-date-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fac-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #a1a1aa;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fac-checkbox-label input {
+  accent-color: #f59e0b;
+  cursor: pointer;
+}
+
+.fac-date-hint {
+  display: block;
+  font-size: 10px;
+  color: #71717a;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.fac-quick-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.fac-quick-btn {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  color: #d4d4d8;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.fac-quick-btn:hover {
+  background: #27272a;
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.fac-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.fac-btn-primary {
+  background: #f59e0b;
+  color: #09090b;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.fac-btn-primary:hover {
+  background: #fbbf24;
+}
+
+/* Botão de Parada Dentro do Painel */
+.fac-btn-stop {
+  background: #ef4444;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: background 0.15s;
+  animation: pulse-red 1.6s infinite;
+}
+
+.fac-btn-stop:hover {
+  background: #dc2626;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+}
+
+.fac-live-box {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 6px;
+}
+
+.fac-live-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f4f4f5;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.fac-pulsing-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  animation: fac-pulse 1.5s infinite;
+}
+
+@keyframes fac-pulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.fac-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr 0.8fr;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.fac-stat-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 5px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.fac-stat-card.highlight {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.fac-btn-cancel {
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #fb7185;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.fac-btn-cancel:hover {
+  background: #3f3f46;
+  color: #f43f5e;
+  border-color: #f43f5e;
+}
+
+.fac-stat-title {
+  color: #a1a1aa;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.fac-stat-val {
+  color: #f59e0b;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.fac-stat-date-highlight {
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.fac-stat-small {
+  font-size: 13px;
+  color: #e4e4e7;
+}
+
+.fac-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #27272a;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.fac-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #10b981);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.fac-status-text {
+  font-size: 11px;
+  color: #a1a1aa;
+  margin-top: 6px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conserva_Fotos - WhatsApp Web HD</title>
+  <style>
+    body {
+      width: 330px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #18181b;
+      color: #f4f4f5;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #27272a;
+      padding-bottom: 10px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 15px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+    .badge {
+      background: #27272a;
+      color: #34d399;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #3f3f46;
+    }
+    p {
+      font-size: 12px;
+      color: #a1a1aa;
+      line-height: 1.4;
+      margin-top: 0;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      background: #f59e0b;
+      color: #09090b;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #fbbf24;
+    }
+    .features {
+      margin-top: 14px;
+      font-size: 11px;
+      color: #71717a;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .features div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .check {
+      color: #10b981;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Conserva_Fotos</h1>
+    <span class="badge">v5.1</span>
+  </div>
+  <p>Extrator Contínuo de Fotos em Alta Resolução do WhatsApp Web (Busca Ativa de Fotos e Modo Tudo Automático).</p>
+  <button id="open-wa-btn" class="btn">Abrir WhatsApp Web</button>
+  <div class="features">
+    <div><span class="check">✓</span> ⚡ Modo Tudo Automático: 1 clique de ponta a ponta</div>
+    <div><span class="check">✓</span> Nome do ZIP com intervalo de datas [Inicial a Final]</div>
+    <div><span class="check">✓</span> Suporte a grupos/álbuns extensos (até 200 fotos)</div>
+    <div><span class="check">✓</span> Formato: EMPRESA_CONVERSA_DATA_SEQ.jpg</div>
+    <div><span class="check">✓</span> Planilha Excel automática no ZIP</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

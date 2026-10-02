@@ -1,0 +1,84 @@
+========================================================================
+📸 Conserva_Fotos (FiscalizACampo) - Extensão Chrome WhatsApp Web v5.1
+(Pastas de Datas Diretas no ZIP + Caixa Única + Alta Resolução)
+========================================================================
+
+NOVIDADES DA VERSÃO v5.1:
+
+1. 📂 PASTAS DAS DATAS DIRETAS NA RAIZ DO ZIP (SUPER PRÁTICO):
+   - Ao abrir ou descompactar o arquivo ZIP, você vê diretamente:
+     • A planilha Excel (INDICE_E_CONFERENCIA_CAMPOS.xlsx)
+     • As pastas das datas (ex: 20260925, 20260926) contendo as fotos em alta resolução.
+   - Nenhuma pasta aninhada ou intermediária desnecessária.
+   - O nome do arquivo da foto mantém a identificação completa: [EMPRESA]_[CONVERSA]_[DATA]_[SEQ].jpg.
+
+2. 📦 CAIXA ÚNICA INTEGRADA E COMPACTA:
+   - Uma única caixa na tela. Quando fechada, fica como uma pílula compacta ("Conserva_Fotos v5.1 ▼").
+   - Ao clicar nela, o painel abre diretamente abaixo dela, tudo em um só componente.
+
+3. 🚀 MOTOR DE CAPTURA ESTABILIZADO (200+ FOTOS POR BLOCO):
+   - Motor 100% preservado e calibrado com alta tolerância a atrasos do WhatsApp Web.
+
+3. ⚡ ABERTURA DIRETA EM 1 CLIQUE (SEM POP-UP / SEM DUPLICAR ABAS):
+   - Ao clicar no ícone da extensão no Chrome, o painel abre DIRETAMENTE na sua página do WhatsApp Web!
+
+2. 🔎 BUSCA ATIVA DE FOTOS NO CHAT:
+   - Se na data atual (ex: hoje) não houver fotos (somente áudios, textos e PDFs), o robô sobe a conversa de forma rápida até encontrar a foto mais recente do período selecionado e abrir o visualizador de mídias!
+
+3. 📂 PASTAS ENXUTAS NO ZIP (CONVERSA/DATA):
+   - Elimina pastas intermediárias redundantes, organizando diretamente em [Nome da Conversa]/[Data].
+
+4. 📊 PLANILHA EXCEL COM COLUNAS ESSENCIAIS:
+   - Empresa, Conversa, Data Postagem, Resolução, Dimensões e Tamanho_KB.
+
+1. 🛡️ TRATAMENTO DE MÍDIAS INDISPONÍVEIS SEM INTERRUPÇÃO:
+   - Fecha o modal ("OK") e força a navegação para a foto anterior (`ArrowLeft`).
+   - Descarta a mídia e CONTINUE a varredura normalmente, sem encerrar o processo.
+
+2. 📜 CARREGAMENTO FORÇADO DO HISTÓRICO ANTIGO:
+   - Ao atingir o fim do lote visível, emula a rolagem para o topo absoluto (`scrollTop = 0`).
+   - Aguarda estritamente 3 segundos (3000ms) para que o WhatsApp Web injete novas
+     mensagens do servidor no DOM antes de prosseguir.
+
+3. 🎯 CRITÉRIOS EST RITOS PARA ENCERRAMENTO (SOMENTE EM 2 CASOS):
+   - Caso 1: A data da mídia processada atingir ou ultrapassar a data limite informada.
+   - Caso 2: O topo absoluto do chat for alcançado (quando não houver mais mensagens
+     mesmo após 5 tentativas consecutivas de rolagem manual).
+
+4. 🔒 TECNOLOGIA ZERO CDN E VANILLA JS PURO:
+   - 100% offline via bibliotecas locais (JSZip e XLSX), sem requisições externas.
+
+2. 🚀 ABERTURA 100% AUTOMÁTICA DA BARRA / FOTOS DO CHAT:
+   - Não precisa mais abrir a foto manualmente no WhatsApp!
+   - Ao clicar em "Iniciar Download Automático", a extensão localiza a foto mais
+     recente no chat, abre o visualizador sozinha e inicia a varredura.
+
+3. 📐 BOTÕES TOTALMENTE CENTRALIZADOS:
+   - Os botões "Iniciar Download Automático" e "PARAR E BAIXAR AGORA" estão
+     perfeitamente centralizados e destacados no painel.
+
+========================================================================
+PASSO A PASSO PARA ATUALIZAR NO SEU NAVEGADOR:
+========================================================================
+
+1. Extraia o conteúdo deste arquivo ZIP para a pasta onde você mantém a extensão.
+   (Substitua todos os arquivos existentes).
+
+2. Abra o Google Chrome ou Edge e acesse:
+   chrome://extensions
+
+3. Clique no botão de ATUALIZAR (ícone de seta circular 🔄) no card da extensão.
+
+4. Abra ou recarregue a aba do WhatsApp Web (F5).
+
+5. Clique em qualquer foto da conversa para abri-la no WhatsApp Web e clique em
+   "🚀 Iniciar Download Automático das Fotos"!
+
+3. Certifique-se de que o "Modo do desenvolvedor" (no canto superior direito) está ATIVADO.
+
+4. Localize a extensão "Conserva_Fotos - FiscalizACampo WhatsApp HD"
+   e clique no botão circular de RECARREGAR (🔄).
+
+5. Na aba do WhatsApp Web, pressione F5 para atualizar a página.
+
+6. Abra o grupo desejado, clique no botão flutuante "Conserva_Fotos" e inicie a coleta.

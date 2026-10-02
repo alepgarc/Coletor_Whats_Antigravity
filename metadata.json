@@ -1,0 +1,9 @@
+{
+  "name": "FiscalizACampo - Organizador de Registros WhatsApp e Medição",
+  "description": "Organizador e cruzador de registros de campo para fiscais de conservação rodoviária. Processa conversas do WhatsApp, fotos e planilhas com exportação e conferência 100% no navegador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+

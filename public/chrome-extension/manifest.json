@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Conserva_Fotos - FiscalizACampo WhatsApp HD",
+  "version": "5.1.0",
+  "description": "Conserva_Fotos v5.1: Pastas de Datas Diretas na Raiz do ZIP, Caixa Única Integrada e Download em Alta Resolução.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "action": {
+    "default_title": "Conserva_Fotos - Abrir/Fechar Painel no WhatsApp"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "jszip.min.js",
+        "xlsx.full.min.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
